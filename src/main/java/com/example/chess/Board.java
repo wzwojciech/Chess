@@ -34,7 +34,7 @@ public class Board {
         }
         for (x = 0; x < 8; x += 2) {
             setFigure(new Pawn(FigureColor.BLACK), x, 0);
-            setFigure(new Pawn(FigureColor.WHITE), x, 2);
+            setFigure(new Pawn(FigureColor.BLACK), x, 2);
             setFigure(new Pawn(FigureColor.WHITE), x, 6);
 
         }
