@@ -12,7 +12,6 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Base64;
 
 import static javafx.scene.paint.Color.GRAY;
 
@@ -63,19 +62,19 @@ public class ChessApp extends Application {
 
         Scene scene = new Scene(gridPane, 700, 700);
 
-//        Game game = new Game(board, gridPane);
-//        gridPane.setOnMouseClicked(e -> {
-//            int x = (int) (e.getX() / 87);
-//            int y = (int) (e.getY() / 87);
-//            System.out.println(e.getX() + " " + e.getY());
-//            System.out.println(x + " " + y);
-//            game.doClick(x, y);
-//        });
-//        game.showBoard();
-//        primaryStage.setTitle("CheckersApp");
-//        primaryStage.setScene(scene);
-//        primaryStage.show();
+        Game game = new Game(board, gridPane);
+        gridPane.setOnMouseClicked(e -> {
+            int x = (int) (e.getX() / 87);
+            int y = (int) (e.getY() / 87);
+            System.out.println(e.getX() + " " + e.getY());
+            System.out.println(x + " " + y);
+            game.doClick(x, y);
+        });
+        game.showBoard();
+        primaryStage.setTitle("CheckersApp");
+        primaryStage.setScene(scene);
+        primaryStage.show();
    }
 
-    }
 }
+
